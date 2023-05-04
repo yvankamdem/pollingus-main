@@ -12,6 +12,10 @@ public class QuestionExtractor {
     static class QuestionVisitor extends AbstractVisitor {
         private List<String> questions;
 
+        public QuestionVisitor(List<String> questions) {
+            this.questions = questions;
+        }
+
         public QuestionVisitor(){
             //initialser la liste
             questions = new ArrayList<>();

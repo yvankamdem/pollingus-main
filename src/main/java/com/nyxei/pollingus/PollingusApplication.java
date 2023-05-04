@@ -17,8 +17,8 @@ public class PollingusApplication {
 
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(PollingusApplication.class, args);
-		Digester.lectureMd("markdown-syntax/yes-no-question.md");
-		Digester.lectureMd("markdown-syntax/affiliate-question.md");
+		Digester.readMd("markdown-syntax/yes-no-question.md");
+		Digester.readMd("markdown-syntax/affiliate-question.md");
 		Parser parser = Parser.builder().build();
 		Node document = parser.parse("This is *Sparta*");
 		HtmlRenderer renderer = HtmlRenderer.builder().build();
